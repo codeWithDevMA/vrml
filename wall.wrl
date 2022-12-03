@@ -1,0 +1,23 @@
+#VRML V2.0 utf8 
+Group {
+	children[
+	Transform {		
+		translation -11.5 0.0 -11.5
+		#Wall this defines the shape and color of the wall which is used in the main world
+		children Shape {
+		appearance Appearance {
+			texture ImageTexture {url "textures/wall.jpg"}
+			textureTransform TextureTransform {
+				scale 100 10
+				}
+			}
+				
+
+geometry Extrusion{ 
+          
+crossSection [ -1 -1, -1 1, 1 1, 1 -1, -1 -1] 
+spine [0 1 0 , 0 1 0 ]} 
+}
+}
+]
+}
