@@ -1,0 +1,21 @@
+#VRML V2.0 utf8
+DEF Particle1 Transform {
+
+ children [
+ Inline {
+                   url "plane.wrl"
+                } 
+ ]
+}
+DEF Timer1 TimeSensor {
+ cycleInterval 12.0
+ loop TRUE
+ startTime 0.0
+ stopTime -1.0
+}
+DEF Position1 PositionInterpolator {
+ key [ 0.0, 0.2, 0.4, 0.8 ,1.0]
+ keyValue [ -40 0 3, -20 0 3, -0 0 3,20 0 3,30 0 3]
+}
+ROUTE Timer1.fraction_changed TO Position1.set_fraction
+ROUTE Position1.value_changed TO Particle1.set_translation

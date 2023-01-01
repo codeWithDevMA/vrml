@@ -4,23 +4,12 @@
 
 
 WorldInfo {
-   title "Traffic light system"
+   title "virtuel city with Traffic light system"
 }
-#This turns on the gravity in the world and turns off the examine option
 NavigationInfo {
    type "WALK"
 }
-#The following Navigation types are used in the other versions of the main 
-#NavigationInfo {
-#   type "FLY"
-#}
-#NavigationInfo {
-#   type "ANY"
-#}
 Background {
-#   skyColor [ 1 1 0, 1 1 0.5, 0 0 0.5, 0.2 1 1 ]
-#   skyAngle [1.309, 1.571]
-
 	skyAngle [ 1.2 1.57]
 skyColor [0 0 1, 0 0 0.6, 1 0 0]
 groundColor [0.5 0.5 0.0]
@@ -31,8 +20,6 @@ frontUrl "textures/sunset_front.png"
 topUrl "textures/sunset_top.png"
 bottomUrl "textures/sunset_bottom.png"
 }
-#These are the two possible fixed views available in this version
-# the others are included in the 'FLY' and "ANY' versions
 Viewpoint {
    position -6 2 15
    orientation 1 0 0 -0.2
@@ -43,28 +30,13 @@ Viewpoint {
    orientation 0 1 0 0.785
    description "View of the lights"
 }
-#Viewpoint { 
-#   position    0 25 0
-#   orientation 1  0 0 -1.57
-#   description "View from directly above"
-#}
-#Viewpoint {
-#   position 0 20 18
-#   orientation 1 0 0 -0.785
-#   description "High-angled view" 
-#}
-# Sets the light source aswell as the headlight to a directional light source
-# of parallel light giving the impression that the light is eminating form source at infinity 
 DirectionalLight {
    on         TRUE
    intensity  .5
    color      1.0 1.0 1.0  
    ambientIntensity 1.0
    direction -.00327 -.83034 .55724
-} 
-#The main world and its Inlined components
-#It places the Ground.wrl file in this background and places the trafficlights in the 
-#appropriate places on the ground
+} ,
 Group {
    children [
 	  
@@ -78,6 +50,15 @@ Group {
                   url "Trafficlight1.wrl"
                }
           ]
+      },
+      Transform {
+          translation -19 -2.5  13.0
+	  rotation    0.0 1.0  0.0 3.14
+             children [
+               Inline {
+                  url "mosque.wrl"
+               }
+             ]
       },
       Transform {
           translation 0.0 0.0  8.0
@@ -195,9 +176,8 @@ Group {
 	  }
 	  ,
 	  Transform	{
-		   translation -25.0 0.0 -40.0
-		   scale .04 .04 .04
-		   rotation     0.0 0.0  0.0 1.57
+		   translation 17.0 -1 30.0
+		   scale 0.5 0.5 0.5 
              children [
                 Inline {
                    url "building4.wrl"
@@ -205,13 +185,182 @@ Group {
              ]
 	  
 	  }
-	   Transform	{
-		   translation -20.0 0.0 40.0
-		   scale .006 .006 .006
-		   rotation     0.0 0.0  0.0 1.57
+,
+Transform	{
+		   translation -30 -1 -15
+		   scale 0.5 0.5 0.5 
              children [
                 Inline {
-                   url "building1.wrl"
+                   url "biulding2.wrl"
+                }
+             ]
+	  
+	  },
+Transform	{
+		   translation -30 -1 -25
+		   scale 0.5 0.5 0.5 
+             children [
+                Inline {
+                   url "biulding2.wrl"
+                }
+             ]
+	  
+	  },
+Transform	{
+		   translation -30 -1 -35
+		   scale 0.5 0.5 0.5 
+             children [
+                Inline {
+                   url "biulding2.wrl"
+                }
+             ]
+	  
+	  },
+     Transform	{
+		   translation -30 -1 -45
+		   scale 0.5 0.5 0.5 
+             children [
+                Inline {
+                   url "biulding2.wrl"
+                }
+             ]
+	  
+	  },
+      Transform	{
+		   translation -30 -1 -55
+		   scale 0.5 0.5 0.5 
+             children [
+                Inline {
+                   url "biulding2.wrl"
+                }
+             ]
+	  
+	  },
+     Transform	{
+		   translation -30 -1 -65
+		   scale 0.5 0.5 0.5 
+             children [
+                Inline {
+                   url "biulding2.wrl"
+                }
+             ]
+	  
+	  },
+
+     Transform	{
+		   translation -30 -1 -75
+		   scale 0.5 0.5 0.5 
+             children [
+                Inline {
+                   url "biulding2.wrl"
+                }
+             ]
+	  
+	  },
+
+
+Transform	{
+		   translation -40 -1 -15
+		   scale 0.5 0.5 0.5 
+             children [
+                Inline {
+                   url "biulding2.wrl"
+                }
+             ]
+	  
+	  },
+Transform	{
+		   translation -40 -1 -25
+		   scale 0.5 0.5 0.5 
+             children [
+                Inline {
+                   url "biulding2.wrl"
+                }
+             ]
+	  
+	  },
+Transform	{
+		   translation -40 -1 -35
+		   scale 0.5 0.5 0.5 
+             children [
+                Inline {
+                   url "biulding2.wrl"
+                }
+             ]
+	  
+	  },
+     Transform	{
+		   translation -40 -1 -45
+		   scale 0.5 0.5 0.5 
+             children [
+                Inline {
+                   url "biulding2.wrl"
+                }
+             ]
+	  
+	  },
+      Transform	{
+		   translation -40 -1 -55
+		   scale 0.5 0.5 0.5 
+             children [
+                Inline {
+                   url "biulding2.wrl"
+                }
+             ]
+	  
+	  },
+     Transform	{
+		   translation -40 -1 -65
+		   scale 0.5 0.5 0.5 
+             children [
+                Inline {
+                   url "biulding2.wrl"
+                }
+             ]
+	  
+	  },
+
+     Transform	{
+		   translation -40 -1 -75
+		   scale 0.5 0.5 0.5 
+             children [
+                Inline {
+                   url "biulding2.wrl"
+                }
+             ]
+	  
+	  },
+
+
+
+     ,Transform	{
+		   translation 17.0 -1 40.0
+		   scale 0.5 0.5 0.5 
+             children [
+                Inline {
+                   url "building4.wrl"
+                }
+             ]
+	  
+	  }
+     ,
+	  Transform	{
+		   translation 17.0 -1 20.0
+		   scale 0.5 0.5 0.5 
+             children [
+                Inline {
+                   url "building4.wrl"
+                }
+             ]
+	  
+	  }
+	,
+	   Transform	{
+		   translation 15.0 -1 10.0
+		   scale 0.5 0.5 0.5 
+             children [
+                Inline {
+                   url "building4.wrl"
                 }
              ]
 	  
@@ -238,11 +387,30 @@ Group {
                 }
              ]
 	  
-	  }
-	  	,
+	  },
 
-      
-	  Transform	{
+DEF tr Transform {
+   children [
+	
+                Inline {
+                   url "plane.wrl"
+                } 
+             
+
+	DEF pi PositionInterpolator {
+		key [ 0.0, 0.2, 0.4, 0.8 ,1.0]
+ keyValue [ -40 3 3, -20 3 3, 0 3 3,20 3 3,30 3 3]
+	}
+
+	DEF ts TimeSensor {
+		cycleInterval 2
+		loop TRUE
+
+	}
+   ]
+}
+,
+   	  Transform	{
 		   translation 20.0 0.0 40.0
 		   rotation     0.0 1.0  0.0 3.57
              children [
@@ -325,7 +493,6 @@ Group {
 	  }
 	  	,
 
-		#Bus stop at the Right Side
 	  Transform	{
 		   translation 10.0 0.2 25.2
 		   rotation     0.0 0.0  0.0 1.57
@@ -350,29 +517,51 @@ Group {
              ]
 	  
 	  },
-	  # Bus stop at the lef side
-	  Transform	{
-		   translation 5.0 0.2 25.2
-		   rotation     0.0 2  0 2
-		   scale 1 1 2
-             children [
-                Inline {
-                   url "Car.wrl"
-                }
-             ]
-	  
-	  },
+      Sound {
+            source AudioClip {
+               url "car-ignition-1.wav"
+               loop TRUE
+               startTime 1.0
+               stopTime 0.0
+            }
+            minFront 5.0
+            minBack  5.0
+            maxFront 15.0
+            maxBack  15.0
+         }
 
-	  Transform	{
-		   translation 5.0 0.2 25.2
-		   rotation     0.0 2  0 2
-		   scale 1 1 2
+
+	 ,
+
+     DEF Particle1  Transform	 {
+         translation 1.9 2 -6
+		   rotation    -1.0 0.0  3.15 0.0 
+		   scale 0.5 0.5 0.5
              children [
-                Inline {
+               
+          Inline {
                    url "Car.wrl"
                 }
              ]
-	  
-	  }
+	  },
+# Animation clock
+  DEF Clock TimeSensor {
+      cycleInterval 4.0
+      loop TRUE
+  },
+ 
+   DEF Position7 PositionInterpolator {
+	key [ 0.0, 0.2, 0.4, 0.8 ,1.0]
+ keyValue [ -40 1 3, -20 1 3, 0.5 1 3,20 1 3,30 1 3]
+   },
+
    ]
 }
+ROUTE Clock.fraction_changed  TO Position7.set_fraction
+ROUTE Position7.value_changed TO Particle1.set_translation  
+
+
+
+
+ROUTE ts.fraction_changed TO pi.set_fraction
+ROUTE pi.value_changed TO tr.set_translation

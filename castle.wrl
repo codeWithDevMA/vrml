@@ -1,34 +1,4 @@
 #VRML V2.0 utf8
-#
-#  castle.wrl
-#  Fairy-tale castle
-#	by David R. Nadeau
-#
-#  This world builds a fairy-tale castle atop a green hill with
-#  a blue sky behind.  There are no animations or fun things to
-#  click on...  that's up to you.
-#
-#  This world illustrates how far you can go using the primitive
-#  geometry nodes:  Box, Cone, and Cylinder.  An entire fairy-tale
-#  castle is built by translating and rotating these shapes into
-#  position.
-#
-#  Things to experiment with...
-#	Change the color scheme to make the castle an evil lair.
-#
-#	Add texture maps to make the castle walls look like they are built
-#	from stone.
-#
-#	Make the castle door an anchor.  Clicking on the door leads to
-#	another world describing the castle interior.
-#
-#	Add panorama cloud and mountain textures to the Background node.
-#
-#	In Nintendo 64 style, add platforms that rise and fall and cannons
-#	that rise up when you approach.  You can build these using
-#	PositionInterpolators and TimeSensors to run the animations,
-#	and ProximitySensors to trigger the actions.
-#
 
 WorldInfo {
     title "Fairy-tale Castle"
@@ -45,21 +15,6 @@ NavigationInfo {
     type [ "WALK", "ANY" ]
     headlight TRUE
     speed 40.0
-}
-
-Transform {
-    translation 0.0 -1.6 0.0
-    children [
-        Shape {
-            appearance Appearance {
-                material Material {
-                    diffuseColor 0.0 0.0 0.0
-                    emissiveColor 0.0 0.5 0.0
-                }
-            }
-            geometry Box { size 2000.0 0.01 2000.0 }
-        }
-    ]
 }
 
 #
